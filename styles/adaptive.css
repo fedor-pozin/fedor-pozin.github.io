@@ -1,0 +1,58 @@
+@media (min-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+    
+    .header {
+        padding: 25px 15px;
+    }
+    
+    .header h1 {
+        font-size: 28px;
+    }
+    
+    .navbar {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .navbar a {
+        padding: 10px 12px;
+        border-bottom: none;
+    }
+    
+    .content {
+        padding: 15px;
+        padding-bottom: 60px;
+    }
+    
+    .posts-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .post {
+        flex: 1 1 calc(50% - 15px);
+        margin-bottom: 0;
+    }
+    
+    .subscribe-form {
+        flex-direction: row;
+    }
+    
+    .subscribe-form input {
+        width: auto;
+        flex-grow: 1;
+    }
+    
+    .subscribe-form button {
+        width: auto;
+    }
+    
+    .footer {
+        position: static;
+        padding: 10px;
+    }
+}

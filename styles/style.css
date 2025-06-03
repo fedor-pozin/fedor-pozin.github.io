@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #c7c7c7;
+       
+}
+
+.header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background-image: url("щука.webp");
+    background-repeat: no-repeat;  
+    background-size: cover;
+}
+
+.navbar {
+    background-color: #444;
+}
+
+.navbar a {
+    color: whitesmoke ;
+    text-decoration: none;
+    padding: 14px;
+    display: inline-block;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.content {
+    padding: 20px;
+    
+}
+
+.posts-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Отступ между статьями */
+    margin-bottom: 20px;
+}
+
+/* Стили для каждой статьи */
+.post {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    flex: 1 1 calc(50% - 20px); /* 2 статьи в строке с отступом */
+    box-sizing: border-box; /* Чтобы padding не ломал расчёты ширины */
+    min-width: 300px; /* Минимальная ширина статьи */
+}
+
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+}
+
+.post-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.gallery {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.gallery img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Форма подписки */
+.subscribe-form {
+    display: flex;
+    gap: 10px;
+}
+
+
+.subscribe-form input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.subscribe-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.subscribe-form button:hover {
+    background-color: #45a049;
+}
+
+
+/* Социальные иконки */
+.social-links {
+    margin-bottom: 10px;
+}
+
+.social-links img {
+    width: 32px;
+    height: 32px;
+    margin: 0 10px;
+}

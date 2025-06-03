@@ -1,40 +1,82 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Моя первая страница</title>
+    <title>Рыбалка - советы и обсуждение</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/adaptive.css">
 </head>
 <body>
 
     <!-- Header -->
     <div class="header">
         <h1>Рыбалка</h1>
-        <p>Добро пожаловать!</p>
+        <p>Сайт для настоящих рыбаков</p>
     </div>
 
     <!-- Навигационное меню -->
     <div class="navbar">
         <a href="#">Главная</a>
-        <a href="#">О нас</a>
-        <a href="#">Контакты</a>
+        <a href="#">Чек-лист для новичков</a>
+        <a href="#">Фото отчеты</a>
+        <a href="#">Форум</a>
+        <a href="#">Поддержка</a>
     </div>
 
     <!-- Основной контент -->
     <div class="content">
-        <div class="post">
-            <h2>Заголовок статьи</h2>
-            <p>Текст статьи...</p>
+        <div class="posts-container">
+
+            <div class="post">
+                <h2>Приманки для рыб</h2>
+                <img src="https://relaxlures.ru/images/products/main_photos/kalif/kalif_foto.jpg" alt="Приманки для щуки" class="post-image">
+                <p>Щука — хищник, поэтому выбирайте яркие воблеры и блёсны. В мутной воде лучше работают шумовые приманки.</p>
+                <a href="#" class="read-more">Читать далее...</a>
+            </div>
+
+            
+            <div class="post">
+                <h2>Зимняя рыбалка: секреты</h2>
+                <img src="https://fishing-pro-39.ru/images/2020/12/46741508.jpg" alt="Приманки для щуки" class="post-image">
+                <p>Как не замёрзнуть и поймать окуня со льда? Используйте мелкие мормышки и термобельё!</p>
+                <a href="#" class="read-more">Читать далее...</a>
+            </div>
+
         </div>
+        
+    
+
+    <!-- Галерея -->
         <div class="post">
-            <h2>Еще одна статья</h2>
-            <p>Еще текст...</p>
+            <h2>Галерея улова</h2>
+            <div class="gallery">
+                <img src="https://example.com/fish1.jpg" alt="Щука">
+                <img src="https://example.com/fish2.jpg" alt="Окунь">
+                <img src="https://example.com/fish3.jpg" alt="Карп">
+            </div>
         </div>
+
+
+    <!-- Форма подписки -->
+        <div class="post">
+            <h2>Подписаться на новости</h2>
+            <form class="subscribe-form">
+                <input type="email" placeholder="Ваш email" required>
+                <button type="submit">Подписаться</button>
+            </form>
+        </div>
+
+
     </div>
+
 
     <!-- Подвал -->
     <div class="footer">
-        <p>&copy; 2024 Мой сайт</p>
+        <div class="social-links">
+            <a href="#"><img src="icon-vk.png" alt="ВКонтакте"></a>
+            <a href="#"><img src="icon-telegram.png" alt="Telegram"></a>
+        </div>
+        <p>&copy; 2024 Рыбалка. Все права защищены.</p>
     </div>
       
 
