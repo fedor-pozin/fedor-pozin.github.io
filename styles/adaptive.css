@@ -1,58 +1,103 @@
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     body {
         font-size: 15px;
+        overflow-x: hidden;
     }
     
     .header {
-        padding: 25px 15px;
+        padding: 15px;
+        background-size: contain; /* Изменяем cover на contain */
+        background-position: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        position: relative;
+    }
+
+    .header-content {
+        flex: 1;
     }
     
     .header h1 {
         font-size: 28px;
     }
-    
-    .navbar {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+
+    .burger-menu {
+        display: block;
+    }
+
+    .burger-icon {
+        font-size: 24px;
+        color: white;
+        padding: 10px;
     }
     
+    .navbar {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: #444;
+        flex-direction: column;
+        padding: 70px 20px 20px;
+        transition: right 0.3s ease;
+        z-index: 1000;
+        box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+    }
+
+     .navbar.active {
+        right: 0;
+    }
+
     .navbar a {
-        padding: 10px 12px;
+        display: block;
+        padding: 12px 0;
+        color: white;
+        text-decoration: none;
+        border-bottom: 1px solid #555;
+        text-align: left;
+    }
+    
+    .navbar a:hover {
+        background-color: #555;
+    }
+
+    .navbar a {
+        padding: 10px;
+        text-align: center;
         border-bottom: none;
     }
     
     .content {
-        padding: 15px;
-        padding-bottom: 60px;
+        padding: 10px;
     }
     
     .posts-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 15px;
+        gap: 10px;
     }
     
     .post {
-        flex: 1 1 calc(50% - 15px);
-        margin-bottom: 0;
+        flex: 1 1 100%;
+        min-width: auto;
+        min-width: 0;
     }
+
     
     .subscribe-form {
-        flex-direction: row;
+        flex-direction: column;
     }
     
-    .subscribe-form input {
-        width: auto;
-        flex-grow: 1;
-    }
     
+    .subscribe-form input,
     .subscribe-form button {
-        width: auto;
+        width: 100%;
+        box-sizing: border-box;
     }
     
     .footer {
-        position: static;
-        padding: 10px;
+        padding: 15px;
     }
 }

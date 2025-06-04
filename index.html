@@ -5,13 +5,23 @@
 
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/adaptive.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
 
-    <!-- Header -->
+
     <div class="header">
-        <h1>Рыбалка</h1>
-        <p>Сайт для настоящих рыбаков</p>
+        <div class="header-content">
+            <h1>Рыбалка</h1>
+            <p>Сайт для настоящих рыбаков</p>
+        </div>
+        <div class="burger-menu">
+            <div class="burger-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
     </div>
 
     <!-- Навигационное меню -->
@@ -47,15 +57,18 @@
     
 
     <!-- Галерея -->
-        <div class="post">
-            <h2>Галерея улова</h2>
-            <div class="gallery">
-                <img src="https://example.com/fish1.jpg" alt="Щука">
-                <img src="https://example.com/fish2.jpg" alt="Окунь">
-                <img src="https://example.com/fish3.jpg" alt="Карп">
+        <div class="gallery-container">
+            <div class="post">
+                <h2>Галерея улова</h2>
+                <div class="gallery">
+                    <img src="https://www.itl.cat/pngfile/big/171-1719834_pike-rhinoceros-wallpaper-at-wallpaperist-pull-fish-out.jpg" alt="Щука">
+                    <img src="https://avatars.mds.yandex.net/i?id=4baff6ffa404df2d93c3276fdfe2c52e_l-12608381-images-thumbs&n=13" alt="Окунь">
+                    <img src="https://avatars.dzeninfra.ru/get-zen_doc/5248867/pub_61f8cef416ca3f127ab0683c_61f8d2d10ecf570cdac83b8e/scale_1200" alt="Карп">
+                </div>
             </div>
-        </div>
 
+        </div>
+            
 
     <!-- Форма подписки -->
         <div class="post">
@@ -73,13 +86,35 @@
     <!-- Подвал -->
     <div class="footer">
         <div class="social-links">
-            <a href="#"><img src="icon-vk.png" alt="ВКонтакте"></a>
-            <a href="#"><img src="icon-telegram.png" alt="Telegram"></a>
+            <a href="#"><img src="https://www.svgrepo.com/show/331634/vk-v2.svg" alt="ВКонтакте"></a>
+            <a href="#"><img src="https://www.svgrepo.com/show/354443/telegram.svg" alt="Telegram"></a>
         </div>
         <p>&copy; 2024 Рыбалка. Все права защищены.</p>
     </div>
       
 
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const burgerIcon = document.querySelector('.burger-icon');
+            const navbar = document.getElementById('navbar');
+            
+            burgerIcon.addEventListener('click', function() {
+                navbar.classList.toggle('active');
+                burgerIcon.innerHTML = navbar.classList.contains('active') 
+                    ? '<i class="fas fa-times"></i>' 
+                    : '<i class="fas fa-bars"></i>';
+            });
+            
+            // Закрываем меню при клике на ссылку
+            document.querySelectorAll('.navbar a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navbar.classList.remove('active');
+                    burgerIcon.innerHTML = '<i class="fas fa-bars"></i>';
+                });
+            });
+        });
+    </script>
 </body>
 </html>
 

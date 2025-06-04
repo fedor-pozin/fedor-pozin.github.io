@@ -1,3 +1,14 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -14,6 +25,10 @@ body {
     background-image: url("щука.webp");
     background-repeat: no-repeat;  
     background-size: cover;
+}
+
+.burger-menu {
+    display: none;
 }
 
 .navbar {
@@ -69,6 +84,10 @@ body {
     height: auto;
     border-radius: 5px;
     margin: 10px 0;
+}
+
+.gallery-container{
+    margin-bottom: 20px;    
 }
 
 .gallery {
